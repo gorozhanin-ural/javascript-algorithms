@@ -10,6 +10,11 @@
 
 function sumOfTwo(arr, sum) {
     // Напишите код здесь
+    return arr.some((term, key) => {
+      return arr.slice(key + 1).some((number) => {
+        return term + number === sum;
+      });
+    });
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

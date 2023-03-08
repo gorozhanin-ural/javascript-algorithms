@@ -10,6 +10,12 @@
 
 function fibonacci(n) {
     // Напишите код здесь
+    const row = [0, 1];
+    for(let i = 2; i <= n; i++) {
+      row.push(row[row.length -1] + row[row.length -2]);
+    }
+
+    return row[n-1];
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
